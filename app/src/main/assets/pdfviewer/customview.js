@@ -39,7 +39,7 @@
       });
 
       // Update page counters
-      document.getElementById('page_num').textContent = pageNum;
+      //document.getElementById('page_num').textContent = pageNum;
     }
     
     /**
@@ -82,7 +82,7 @@
      */
     PDFJS.getDocument(url).then(function getPdf(pdfDoc_) {
       pdfDoc = pdfDoc_;
-      document.getElementById('page_count').textContent = pdfDoc.numPages;
+      //document.getElementById('page_count').textContent = pdfDoc.numPages;
 
       // Initial/first page rendering
       renderPage(pageNum);
