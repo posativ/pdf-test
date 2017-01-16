@@ -37,8 +37,8 @@ public class PdfViewer extends Activity{
 
         settings.setAllowFileAccessFromFileURLs(true);
         settings.setAllowUniversalAccessFromFileURLs(true);
-        settings.setBuiltInZoomControls(true);
-        settings.setDisplayZoomControls(false);
+        //settings.setBuiltInZoomControls(true);
+        //settings.setDisplayZoomControls(false);
 
         webView.setWebChromeClient(new WebChromeClient());
         Uri path = Uri.parse(Environment.getExternalStorageDirectory().toString() + "/Download/fw4.pdf");
