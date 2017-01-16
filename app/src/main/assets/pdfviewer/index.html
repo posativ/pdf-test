@@ -2,12 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="minimal.css"/>
-        <!--  horrible hack needs fix-->
 
-        <script type="text/javascript">
+        <script>
             var url = 'THE_FILE';
         </script>
 
+        <script src="file:///android_asset/pdfviewer/pdf.js"></script>
     </head>
     <body>
         <div>
@@ -18,7 +18,6 @@
             <canvas id="the-canvas" style="border:0px solid black"></canvas>
         </div>
 
-        <script type="text/javascript" src="file:///android_asset/pdfviewer/pdf.js"></script>
-        <script type="text/javascript" src="file:///android_asset/pdfviewer/customview.js"></script> 
+        <script src="file:///android_asset/pdfviewer/customview.js"></script> 
     </body>
 </html>
