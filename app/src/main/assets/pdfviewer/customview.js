@@ -1,3 +1,5 @@
+"use strict";
+
     var pdfDoc = null,
         pageNum = 1,
         pageRendering = false,
