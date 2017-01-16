@@ -1,15 +1,3 @@
-  // NOTE: 
-    // Modifying the URL below to another server will likely *NOT* work. Because of browser
-    // security restrictions, we have to use a file server with special headers
-    // (CORS) - most servers don't support cross-origin browser requests.
-    //
-
-    //
-    // Disable workers to avoid yet another cross-origin issue (workers need the URL of
-    // the script to be loaded, and currently do not allow cross-origin scripts)
-    //
-    PDFJS.disableWorker = false;
-
     var pdfDoc = null,
         pageNum = 1,
         pageRendering = false,
