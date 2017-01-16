@@ -12,7 +12,7 @@
      * Get page info from document, resize canvas accordingly, and render page.
      * @param num Page number.
      */
-    function renderPage(num) {
+    function renderPage(num, scale) {
       pageRendering = true;
       // Using promise to fetch the page
       pdfDoc.getPage(num).then(function(page) {
@@ -32,7 +32,7 @@
           pageRendering = false;
           if (pageNumPending !== null) {
             // New page rendering is pending
-            renderPage(pageNumPending);
+            renderPage(pageNumPending, scale);
             pageNumPending = null;
           }
         });
@@ -50,7 +50,7 @@
       if (pageRendering) {
         pageNumPending = num;
       } else {
-        renderPage(num);
+        renderPage(num, scale);
       }
     }
 
@@ -85,5 +85,5 @@
       //document.getElementById('page_count').textContent = pdfDoc.numPages;
 
       // Initial/first page rendering
-      renderPage(pageNum);
+      renderPage(pageNum, scale);
     });
